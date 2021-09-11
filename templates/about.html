@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="colors">
+			<nav class="navbar navbar-expand-lg navbar-inverse navbar-dark">
+				<div class="container">
+					<div class="logo">
+						<a class="navbar-brand" href="/">
+							<h1 class="animated infinite pulse delay-2s">CG Translator</h1><br>
+						</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link " href="/"><i class="fa fa-home"></i>Home<span
+								class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="/services">Dictionary</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="/about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="/contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="jumbotron">
+			<h1 class="text-center">About us</h1>
+		</div>
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-12">
+						<img src="{% static 'images/dictionary.jpg' %}" class="img-fluid aboutimg">
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-12">
+						 <p class="py-4">This website provides Dictionary and word search module where people can find the meaning of words in Hindi, English and Chhattisgarhi language. This website is basically useful for the user who want to get the meaning of word in Chhattisgarhi language. </p>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- <footer>
+		<p class="p-3 text-white fixed-bottom text-center">© 2020 Copyright: Dictionary</p>
+	</footer> -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

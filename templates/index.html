@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+<section id="contact">
+  <div class="section-content">
+    <h1 class="section-header">
+      <span class="content-header wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
+        Translate</span>
+      your text
+    </h1>
+    <h3>Write and click <b>TRANSLATE</b></h3>
+  </div>
+  <div class="contact-section"> 
+    <div class="container">
+      <form method="GET" action="/search">
+        <div class="row">
+          <div class="col-sm-6 form-line">
+            <div class="form-group">
+              <label for="from"> From</label>
+              <select name="from">
+                <option value="hi">Hindi</option>
+                <!-- <option value="en">English</option>
+                <option value="cg">Chhattisgarhi</option> -->
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="search" name="search" placeholder="Enter Your Text"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="from">To</label>
+              <select name="from">
+                <option value="cg">Chhattisgarhi</option>
+                <!-- <option value="hi">Hindi</option>
+                <option value="en">English</option> -->
+              </select>
+              <select name="from" class="ml-5">
+                <option value="en">English</option>
+              </select>
+            </div>
+            <div class="form-group"> 
+              {% for words in word %}
+              <textarea class="form-control" id="translated" placeholder="Translated text will be here">{{words.chhattisgarhi}}                               {{words.english}}</textarea>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary submit">
+            <i class="fa fa-globe" aria-hidden="true"></i>Translate
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock body %}
